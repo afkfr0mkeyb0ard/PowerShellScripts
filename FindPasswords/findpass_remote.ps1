@@ -2,7 +2,7 @@
 # runas /netonly /user:DOMAIN\User "powershell.exe"
 
 # Define server IP and Share
-$NetworkPath = "\\ServeurDistant\PartageSecret"
+$NetworkPath = "\\RemoteServer\ShareName"
 
 $Extensions = @("*.txt", "*.xml", "*.ini", "*.env", "*.conf", "*.bat", "*.cmd", "*.ps1")
 $Motifs = @("DefaultPassword", "cpassword", "SecureString", "(pass|password|passw)\s*[:=]", "-p\s+\S+")
