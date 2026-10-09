@@ -1,0 +1,1 @@
+Get-ChildItem "C:\" -Recurse -File -Include *.bat,*.cmd,*.txt,*.xml,*.ps1,*.ini,*.env,*.conf -ErrorAction SilentlyContinue | Select-String -Pattern "DefaultPassword","cpassword", "SecureString", "(pass|password|passw)\s*[:=]", "-p\s+\S+" -ErrorAction SilentlyContinue
